@@ -1,0 +1,101 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+:root {
+  --neon-blue: #00f3ff;
+  --neon-purple: #9900ff;
+  --neon-green: #39ff14;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+  color: #fff;
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px var(--neon-blue), 0 0 35px var(--neon-blue), 0 0 40px var(--neon-blue), 0 0 50px var(--neon-blue), 0 0 75px var(--neon-blue);
+  }
+  50% {
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px var(--neon-blue), 0 0 17px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 25px var(--neon-blue), 0 0 37px var(--neon-blue);
+  }
+}
+
+.animate-neon {
+  animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes cyber-glitch {
+  0% {
+    clip-path: inset(50% 0 30% 0);
+    transform: skew(0.15deg);
+  }
+  20% {
+    clip-path: inset(20% 0 60% 0);
+    transform: skew(-0.15deg);
+  }
+  40% {
+    clip-path: inset(40% 0 40% 0);
+    transform: skew(0.15deg);
+  }
+  60% {
+    clip-path: inset(80% 0 5% 0);
+    transform: skew(0.15deg);
+  }
+  80% {
+    clip-path: inset(10% 0 80% 0);
+    transform: skew(-0.15deg);
+  }
+  100% {
+    clip-path: inset(30% 0 50% 0);
+    transform: skew(0.15deg);
+  }
+}
+
+.animate-glitch {
+  animation: cyber-glitch 1s infinite linear alternate-reverse;
+}
+
+.bg-neon-blue {
+  background-color: var(--neon-blue);
+}
+
+.bg-neon-purple {
+  background-color: var(--neon-purple);
+}
+
+.bg-neon-green {
+  background-color: var(--neon-green);
+}
+
+.text-neon-blue {
+  color: var(--neon-blue);
+}
+
+.text-neon-purple {
+  color: var(--neon-purple);
+}
+
+.text-neon-green {
+  color: var(--neon-green);
+}
+
+.border-neon-blue {
+  border-color: var(--neon-blue);
+}
+
+.border-neon-purple {
+  border-color: var(--neon-purple);
+}
+
+.border-neon-green {
+  border-color: var(--neon-green);
+}
+
